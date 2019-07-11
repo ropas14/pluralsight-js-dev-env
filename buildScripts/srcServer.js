@@ -1,9 +1,10 @@
-import express from "express";
-import path from "path";
-import open from "open";
-import webpack from "webpack";
-import config from "../webpack.config.dev";
+var express = require("express");
+var path = require("path");
+var open = require("open");
+var webpack = require("webpack");
+var config= require("../webpack.config.dev");
 
+/*eslint-disable no-console*/
 var port=3000;
 var app=express();
 const compiler = webpack(config);
