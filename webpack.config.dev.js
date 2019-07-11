@@ -1,9 +1,7 @@
 import path from 'path';
 
-export default{
-  debug:true,
+module.exports={
   devtool:"inline-source-map",
-  noInfo:false,
   entry:[
     path.resolve(__dirname,'src/index')
   ],
@@ -13,11 +11,15 @@ export default{
     publicPath:'/',
     filename:'bundle.js'
   },
+  mode:"development",
   plugins:[],
   module:{
-    loaders:[
-      {test: /\.js$/, exclude:/node_modules/, loaders:['babel']},
-      {test:/\.css/, loaders:['style','css']}
+    rules:[
+      {test: /\.js$/,
+        exclude:/node_modules/,
+         loader:'babel-loader'},
+      {test:/\.css/,
+         loaders:['style-loader','css-loader']}
     ]
   }
 

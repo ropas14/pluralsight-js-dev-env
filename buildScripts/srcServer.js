@@ -1,3 +1,4 @@
+require("@babel/register");
 var express = require("express");
 var path = require("path");
 var open = require("open");
@@ -10,7 +11,6 @@ var app=express();
 const compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler,{
- noInfo:true,
  publicPath:config.output.publicPath
 }));
 
