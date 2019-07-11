@@ -11,7 +11,7 @@ describe('Our first test', () => {
 });
 
 describe('index.html', () => {
-  it('should have h1 that says HELLO ..', () => {
+  it('should have h1 that says HELLO ', () => {
     const index = fs.readFileSync('./src/index.html', "utf-8");
     const dom = new JSDOM(`${index}`);
      const h1 = dom.window.document.getElementsByTagName('h1')[0];
