@@ -6,7 +6,7 @@ var webpack = require("webpack");
 var config= require("../webpack.config.dev");
 
 /*eslint-disable no-console*/
-var port=3000;
+var port=4000;
 var app=express();
 const compiler = webpack(config);
 
